@@ -1,242 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Dark Horror Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-/* ===== RESET ===== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-/* ===== BODY ===== */
-body{
-    background:#050505;
-    color:#fff;
-    overflow:hidden;
-}
-
-/* ===== NAVBAR ===== */
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    height:70px;
-    background:rgba(0,0,0,0.8);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:1000;
-    box-shadow:0 0 20px red;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:40px;
-}
-
-nav ul li{
-    cursor:pointer;
-    font-size:18px;
-    letter-spacing:2px;
-    position:relative;
-    transition:0.4s;
-}
-
-nav ul li::after{
-    content:'';
-    position:absolute;
-    left:0;
-    bottom:-8px;
-    width:0;
-    height:2px;
-    background:red;
-    transition:0.4s;
-}
-
-nav ul li:hover{
-    color:red;
-    text-shadow:0 0 10px red,0 0 30px red;
-}
-
-nav ul li:hover::after{
-    width:100%;
-}
-
-/* ===== SECTIONS ===== */
-.section{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    opacity:0;
-    transform:translateY(100%);
-    transition:0.9s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.section.active{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* ===== CONTENT BOX ===== */
-.box{
-    background:rgba(0,0,0,0.7);
-    padding:50px;
-    border:2px solid red;
-    box-shadow:0 0 40px red;
-    text-align:center;
-    animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-    0%{transform:translateY(0)}
-    50%{transform:translateY(-15px)}
-    100%{transform:translateY(0)}
-}
-
-h1{
-    font-size:50px;
-    margin-bottom:20px;
-    text-shadow:0 0 20px red;
-}
-
-p{
-    max-width:500px;
-    line-height:1.7;
-    color:#ccc;
-}
-
-/* ===== GALLERY ===== */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.gallery div{
-    width:150px;
-    height:150px;
-    background:#111;
-    border:2px solid red;
-    transition:0.4s;
-}
-
-.gallery div:hover{
-    transform:scale(1.2) rotate(3deg);
-    box-shadow:0 0 30px red;
-}
-
-/* ===== CONTACT ===== */
-input, textarea{
-    width:300px;
-    padding:10px;
-    margin:10px 0;
-    background:black;
-    border:1px solid red;
-    color:white;
-}
-
-button{
-    padding:12px 30px;
-    background:red;
-    border:none;
-    color:black;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    background:black;
-    color:red;
-    box-shadow:0 0 20px red;
-}
-
-/* ===== BACKGROUND EFFECT ===== */
-body::before{
-    content:'';
-    position:fixed;
-    inset:0;
-    background:radial-gradient(circle at center, transparent, black 70%);
-    pointer-events:none;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast news</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="tarekimg.html">Home</a></li>
+                <li><a href="">Blogs</a></li>
+                <li><a href="">Abouts</a></li>
+                <li><a href="">Tarminal</a></li>
+                <li><a href="">Contact-Us</a></li>
+            </ul>
+        </nav>
+        </header>
+        <main>
+            <form action="">
+                <fieldset class="card">
+                <legend>
+                    Menu Card
+                </legend>
+                <label for="name">Name</label>
+                <input type="name" name="" id="name">
 
-<nav>
-    <ul>
-        <li onclick="showSection('home')">HOME</li>
-        <li onclick="showSection('portfolio')">PORTFOLIO</li>
-        <li onclick="showSection('gallery')">GALLERY</li>
-        <li onclick="showSection('contact')">CONTACT</li>
-    </ul>
-</nav>
+                <label for="video">Number</label>
+                <input type="number" name="" id="video">
 
-<!-- HOME -->
-<div id="home" class="section active">
-    <div class="box">
-        <h1>WELCOME</h1>
-        <p>Dark themed horror portfolio.  
-        Every click feels dangerous.</p>
-    </div>
-</div>
+                <label for="kola">Email</label>
+                <input type="email" name="" id="kola">
+            </fieldset>
+            <fieldset class="to-form">
+                <legend>Chakout</legend>
+                <input type="radio" name="tarek" id="rad">
+                <label for="rad">Biskut</label>
 
-<!-- PORTFOLIO -->
-<div id="portfolio" class="section">
-    <div class="box">
-        <h1>MY WORK</h1>
-        <p>Web Design • Dark UI • Horror Effects • Animations</p>
-    </div>
-</div>
+                <input type="radio" name="tarek" id="r">
+                <label for="r">Begun</label>
 
-<!-- GALLERY -->
-<div id="gallery" class="section">
-    <div class="box">
-        <h1>GALLERY</h1>
-        <div class="gallery">
-            <div></div><div></div><div></div>
-            <div></div><div></div><div></div>
-        </div>
-    </div>
-</div>
+                <input type="radio" name="tarek" id="radi">
+                <label for="radi">Kola</label>
+                
+            </fieldset>
+            <fieldset class="t-form">
+                <legend>Extra</legend>
+                <textarea cols="50" name="" id=""></textarea>
+                
+            </fieldset>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+            </form>
 
-<!-- CONTACT -->
-<div id="contact" class="section">
-    <div class="box">
-        <h1>CONTACT</h1>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <textarea rows="4" placeholder="Message"></textarea>
-        <button>SEND</button>
-    </div>
-</div>
+        </main>
+        <footer>
 
-<script>
-const sections = document.querySelectorAll('.section');
-
-function showSection(id){
-    sections.forEach(sec=>{
-        sec.classList.remove('active');
-    });
-
-    const target = document.getElementById(id);
-    target.classList.add('active');
-}
-</script>
-
+        </footer>
 </body>
 </html>

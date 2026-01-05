@@ -1,0 +1,29 @@
+nav{
+ padding: 2px;
+  
+ background-color: aliceblue;
+}
+nav li{
+  list-style: none;
+  display: inline;
+  margin-right: 20px;
+}
+nav li a{
+  text-decoration: none;
+  font-size: 22px;
+  font-family: Arial;
+}
+nav li a{
+  position: relative;
+  left: 65%;
+  
+}
+nav li a:hover{
+  background-color: red;
+  border-radius: 10px;
+  padding: 5px;
+}
+.card label{
+  display: block;
+  padding: 5px;
+}
